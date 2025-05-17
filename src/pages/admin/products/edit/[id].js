@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import '@/style/globals.css';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import withAuth from '@/pages/utils/withAuth.js';

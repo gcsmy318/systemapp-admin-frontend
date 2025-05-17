@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import '@/style/globals.css';
+
 
 export default function LoginPage() {
   const [password, setPassword] = useState('');

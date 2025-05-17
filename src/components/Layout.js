@@ -1,4 +1,3 @@
-import '../style/globals.css';
 import { useRouter } from 'next/router';
 
 export default function Layout({ children }) {
@@ -33,7 +32,7 @@ export default function Layout({ children }) {
       {/* Footer */}
       <footer className="bg-white border-t border-gray-300 mt-12">
         <div className="max-w-7xl mx-auto px-6 py-6 text-center text-gray-600 text-sm select-none">
-          © 2025 Your Company. All rights reserved.
+          © 2025 Smile Company. All rights reserved.
         </div>
       </footer>
     </div>

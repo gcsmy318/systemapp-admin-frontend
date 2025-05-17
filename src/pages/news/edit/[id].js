@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
-import '@/style/globals.css';
 import withAuth from '@/pages/utils/withAuth.js';
 
 function EditNews() {

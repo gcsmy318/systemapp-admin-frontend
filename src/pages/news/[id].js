@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
-import '@/style/globals.css';
 import withAuth from '@/pages/utils/withAuth.js';
 
 export async function getStaticPaths() {
@@ -21,7 +20,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const res = await fetch(`https://systemappbackend-production.up.railway.app/api/news/${params.id}`);
-
+ // const res = await fetch('http://localhost:8080/api/products')
   if (!res.ok) {
     return { notFound: true };
   }
