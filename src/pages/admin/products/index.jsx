@@ -8,14 +8,14 @@ function ProductAdminPage() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://systemappbackend-production.up.railway.app/api/products')
+    fetch(`${process.env.API_BASE_URL}/api/products`)
       .then((res) => res.json())
       .then(setProducts);
   }, []);
 
   const handleDelete = async (id) => {
     if (confirm('คุณแน่ใจหรือไม่ว่าต้องการลบสินค้านี้?')) {
-      const res = await fetch(`https://systemappbackend-production.up.railway.app/api/products/${id}`, {
+      const res = await fetch(`${process.env.API_BASE_URL}/api/products/${id}`, {
         method: 'DELETE',
       });
       if (res.ok) {

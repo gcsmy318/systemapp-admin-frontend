@@ -16,7 +16,7 @@ function EditNews() {
 
   useEffect(() => {
     if (!id) return;
-    fetch(`https://systemappbackend-production.up.railway.app/api/news/${id}`)
+    fetch(`${process.env.API_BASE_URL}/api/news/${id}`)
       .then(res => res.json())
       .then(data => {
         setTitle(data.title);
@@ -45,7 +45,7 @@ function EditNews() {
       formData.append('imageUrl', imageUrl);
     }
 
-    const res = await fetch(`https://systemappbackend-production.up.railway.app/api/news/${id}`, {
+    const res = await fetch(`${process.env.API_BASE_URL}/api/news/${id}`, {
       method: 'PUT',
       body: formData, // ใช้ formData ส่ง multipart/form-data
       // ห้ามตั้ง headers Content-Type เอง เพราะ browser จะตั้งให้ถูกต้องอัตโนมัติ

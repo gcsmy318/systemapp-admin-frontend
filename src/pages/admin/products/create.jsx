@@ -44,7 +44,7 @@ const categories = [
     formData.append('price', price);
     formData.append('image', image);
 
-    const res = await fetch('https://systemappbackend-production.up.railway.app/api/products', {
+    const res = await fetch(`${process.env.API_BASE_URL}/api/products`, {
       method: 'POST',
       body: formData,
     });

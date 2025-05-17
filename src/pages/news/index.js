@@ -7,7 +7,7 @@ function AdminNewsPage() {
   const [newsList, setNewsList] = useState([]);
 
   useEffect(() => {
-    fetch('https://systemappbackend-production.up.railway.app/api/news')
+    fetch(`${process.env.API_BASE_URL}/api/news`)
       .then(res => res.json())
       .then(data => setNewsList(data))
       .catch(err => console.error(err));
@@ -15,7 +15,7 @@ function AdminNewsPage() {
 
   const handleDelete = async (id) => {
     if (confirm('คุณแน่ใจหรือไม่ว่าต้องการลบข่าวนี้?')) {
-      const res = await fetch(`https://systemappbackend-production.up.railway.app/api/news/${id}`, {
+      const res = await fetch(`${process.env.API_BASE_URL}/api/news/${id}`, {
         method: 'DELETE',
       });
       if (res.ok) {

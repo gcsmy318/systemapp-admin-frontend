@@ -12,7 +12,7 @@ import withAuth from '@/pages/utils/withAuth.js';
 
   useEffect(() => {
     if (id) {
-      fetch(`https://systemappbackend-production.up.railway.app/api/products/${id}`)
+      fetch(`${process.env.API_BASE_URL}/api/products/${id}`)
         .then((res) => res.json())
         .then((data) => setProduct(data));
     }

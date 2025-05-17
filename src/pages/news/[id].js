@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 import withAuth from '@/pages/utils/withAuth.js';
 
 export async function getStaticPaths() {
-  const res = await fetch('https://systemappbackend-production.up.railway.app/api/news');
+  const res = await fetch(`${process.env.API_BASE_URL}/api/news`);
   const newsList = await res.json();
 
   const paths = newsList.map(news => ({
@@ -18,8 +18,9 @@ export async function getStaticPaths() {
   };
 }
 
+
 export async function getStaticProps({ params }) {
-  const res = await fetch(`https://systemappbackend-production.up.railway.app/api/news/${params.id}`);
+  const res = await fetch(`${process.env.API_BASE_URL}/api/news/${params.id}`);
  // const res = await fetch('http://localhost:8080/api/products')
   if (!res.ok) {
     return { notFound: true };

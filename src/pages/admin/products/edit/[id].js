@@ -22,7 +22,7 @@ import withAuth from '@/pages/utils/withAuth.js';
   useEffect(() => {
     if (id) {
       // ดึงข้อมูลสินค้าจาก API
-      fetch(`https://systemappbackend-production.up.railway.app/api/products/${id}`)
+      fetch(`${process.env.API_BASE_URL}/api/products/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setProduct(data);
@@ -58,7 +58,7 @@ import withAuth from '@/pages/utils/withAuth.js';
       updatedData.append('image', formData.image);
     }
 
-    const res = await fetch(`https://systemappbackend-production.up.railway.app/api/products/${id}`, {
+    const res = await fetch(`${process.env.API_BASE_URL}/api/products/${id}`, {
       method: 'PUT',
       body: updatedData,
     });

@@ -5,16 +5,11 @@ import Link from 'next/link';
 import Layout from '@/components/Layout';
 import withAuth from '@/pages/utils/withAuth.js';
 
-
-
  function CreateNews() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
-
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +24,7 @@ import withAuth from '@/pages/utils/withAuth.js';
     formData.append('content', content);
     formData.append('image', imageFile);
 
-    const res = await fetch('https://systemappbackend-production.up.railway.app/api/news', {
+    const res = await fetch(`${process.env.API_BASE_URL}/api/news`, {
       method: 'POST',
       body: formData,
     });
