@@ -65,7 +65,7 @@ function AdminNewsPage() {
                       : news.content}
                   </td>
                   <td className="border px-2 py-2 space-x-2">
-                    <Link href={`/news/${news.id}`} className="text-green-600 hover:underline">ดู</Link>&#10240;
+
                     <Link href={`/news/edit/${news.id}`} className="text-blue-600 hover:underline">แก้ไข</Link>&#10240;
                     <button
                       onClick={() => handleDelete(news.id)}
