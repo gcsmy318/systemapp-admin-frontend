@@ -102,15 +102,7 @@ import withAuth from '@/pages/utils/withAuth.js';
             className="w-full border border-gray-300 rounded px-3 py-2"
           >
             <option value="">-- เลือกหมวดหมู่ --</option>
-            <option value="HEALTHY SNACKS">HEALTHY SNACKS</option>
-            <option value="INSTANT PORRIDGE">INSTANT PORRIDGE</option>
-            <option value="SOUP">SOUP</option>
-            <option value="COOKING INGREDIENTS AND FOOD TOPPINGS">COOKING INGREDIENTS AND FOOD TOPPINGS</option>
             <option value="PROMOTION">PROMOTION</option>
-            <option value="ขนมเสริมพัฒนาการสำหรับเด็ก">ขนมเสริมพัฒนาการสำหรับเด็ก</option>
-            <option value="โจ๊กข้าวกล้องงอก">โจ๊กข้าวกล้องงอก</option>
-            <option value="ซุปธัญพืช">ซุปธัญพืช</option>
-            <option value="ส่วนผสมและเครื่องปรุงประกอบอาหาร">ส่วนผสมและเครื่องปรุงประกอบอาหาร</option>
             <option value="โปรโมชั่น">โปรโมชั่น</option>
           </select>
         </div>

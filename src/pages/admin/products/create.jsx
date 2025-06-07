@@ -18,6 +18,7 @@ import withAuth from '@/pages/utils/withAuth.js';
 const categories = [
   "PROMOTION",
   "โปรโมชั่น",
+
 ];
 
  function CreateProduct() {
