@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import withAuth from '@/pages/utils/withAuth.js';
-const categories = [
+/*const categories = [
   "HEALTHY SNACKS",
   "INSTANT PORRIDGE",
   "SOUP",
@@ -13,6 +13,10 @@ const categories = [
   "โจ๊กข้าวกล้องงอก",
   "ซุปธัญพืช",
   "ส่วนผสมและเครื่องปรุงประกอบอาหาร",
+  "โปรโมชั่น",
+];*/
+const categories = [
+  "PROMOTION",
   "โปรโมชั่น",
 ];
 
